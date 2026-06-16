@@ -1,0 +1,6 @@
+logs/
+datamart/
+model_bank/
+reports/
+__pycache__/
+*.pyc
