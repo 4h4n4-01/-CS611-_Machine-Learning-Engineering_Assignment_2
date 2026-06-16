@@ -1,0 +1,22 @@
+[2026-06-16T10:37:33.504+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-16T10:37:33.527+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: CS611_ML_Pipeline.silver_cleaning scheduled__2023-02-01T00:00:00+00:00 [queued]>
+[2026-06-16T10:37:33.532+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: CS611_ML_Pipeline.silver_cleaning scheduled__2023-02-01T00:00:00+00:00 [queued]>
+[2026-06-16T10:37:33.534+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-06-16T10:37:33.544+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): silver_cleaning> on 2023-02-01 00:00:00+00:00
+[2026-06-16T10:37:33.548+0000] {standard_task_runner.py:63} INFO - Started process 2097 to run task
+[2026-06-16T10:37:33.551+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'CS611_ML_Pipeline', 'silver_cleaning', 'scheduled__2023-02-01T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py', '--cfg-path', '/tmp/tmpwel0ebpz']
+[2026-06-16T10:37:33.552+0000] {standard_task_runner.py:91} INFO - Job 12: Subtask silver_cleaning
+[2026-06-16T10:37:33.586+0000] {task_command.py:426} INFO - Running <TaskInstance: CS611_ML_Pipeline.silver_cleaning scheduled__2023-02-01T00:00:00+00:00 [running]> on host 9cb3f452a997
+[2026-06-16T10:37:33.783+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ahana' AIRFLOW_CTX_DAG_ID='CS611_ML_Pipeline' AIRFLOW_CTX_TASK_ID='silver_cleaning' AIRFLOW_CTX_EXECUTION_DATE='2023-02-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-02-01T00:00:00+00:00'
+[2026-06-16T10:37:33.784+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-16T10:37:37.536+0000] {logging_mixin.py:188} INFO - [Silver] Processing snapshot: 2023-02-01
+[2026-06-16T10:37:43.192+0000] {logging_mixin.py:188} INFO - [Silver] clickstream
+[2026-06-16T10:37:44.578+0000] {logging_mixin.py:188} INFO - [Silver] attributes
+[2026-06-16T10:37:52.247+0000] {logging_mixin.py:188} INFO - [Silver] financials
+[2026-06-16T10:37:54.404+0000] {logging_mixin.py:188} INFO - [Silver] lms
+[2026-06-16T10:37:55.470+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-06-16T10:37:55.471+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-16T10:37:55.479+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=CS611_ML_Pipeline, task_id=silver_cleaning, run_id=scheduled__2023-02-01T00:00:00+00:00, execution_date=20230201T000000, start_date=20260616T103733, end_date=20260616T103755
+[2026-06-16T10:37:55.534+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-06-16T10:37:55.553+0000] {taskinstance.py:3498} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2026-06-16T10:37:55.555+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

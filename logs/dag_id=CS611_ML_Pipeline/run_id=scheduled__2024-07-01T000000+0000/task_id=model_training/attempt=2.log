@@ -1,0 +1,43 @@
+[2026-06-16T13:12:51.441+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-16T13:12:51.500+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: CS611_ML_Pipeline.model_training scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2026-06-16T13:12:51.515+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: CS611_ML_Pipeline.model_training scheduled__2024-07-01T00:00:00+00:00 [queued]>
+[2026-06-16T13:12:51.519+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 3
+[2026-06-16T13:12:51.542+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): model_training> on 2024-07-01 00:00:00+00:00
+[2026-06-16T13:12:51.549+0000] {standard_task_runner.py:63} INFO - Started process 44820 to run task
+[2026-06-16T13:12:51.555+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'CS611_ML_Pipeline', 'model_training', 'scheduled__2024-07-01T00:00:00+00:00', '--job-id', '388', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py', '--cfg-path', '/tmp/tmpz5u00xjb']
+[2026-06-16T13:12:51.559+0000] {standard_task_runner.py:91} INFO - Job 388: Subtask model_training
+[2026-06-16T13:12:51.673+0000] {task_command.py:426} INFO - Running <TaskInstance: CS611_ML_Pipeline.model_training scheduled__2024-07-01T00:00:00+00:00 [running]> on host 0e5a6fd60e5a
+[2026-06-16T13:12:52.061+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ahana' AIRFLOW_CTX_DAG_ID='CS611_ML_Pipeline' AIRFLOW_CTX_TASK_ID='model_training' AIRFLOW_CTX_EXECUTION_DATE='2024-07-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-01T00:00:00+00:00'
+[2026-06-16T13:12:52.063+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-16T13:12:54.095+0000] {logging_mixin.py:188} INFO - [Train] Training model for snapshot: 2024-07-01
+[2026-06-16T13:12:54.105+0000] {logging_mixin.py:188} INFO - [Train] Loading gold data from 2023-01-01 to 2024-07-01
+[2026-06-16T13:12:59.018+0000] {logging_mixin.py:188} INFO - [Train] Loaded 6443 rows, 28.4% default rate
+[2026-06-16T13:12:59.021+0000] {logging_mixin.py:188} INFO - [Train] Raw feature matrix: (6443, 72)
+[2026-06-16T13:12:59.022+0000] {logging_mixin.py:188} INFO - [FeatSelect] Starting with 72 features, 5154 samples
+[2026-06-16T13:12:59.027+0000] {logging_mixin.py:188} INFO - [FeatSelect] Step 1 - no low-variance features found
+[2026-06-16T13:12:59.099+0000] {logging_mixin.py:188} INFO - [FeatSelect] Step 2 - no highly correlated features found
+[2026-06-16T13:12:59.390+0000] {logging_mixin.py:188} INFO - [FeatSelect] Step 3 - kept top 40 features by RF importance
+[2026-06-16T13:12:59.395+0000] {logging_mixin.py:188} INFO - [FeatSelect] Final selection: 40 features
+[2026-06-16T13:12:59.396+0000] {logging_mixin.py:188} INFO - [FeatSelect] Top 5: ['outstanding_debt', 'interest_rate', 'avg_fe_5', 'credit_history_age_months', 'avg_fe_10']
+[2026-06-16T13:12:59.398+0000] {logging_mixin.py:188} INFO - [Train] Selected 40 features after selection
+[2026-06-16T13:12:59.399+0000] {logging_mixin.py:188} INFO - [Train] Evaluating models...
+[2026-06-16T13:14:18.401+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.11/site-packages/sklearn/linear_model/_logistic.py:469 ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+[2026-06-16T13:14:18.540+0000] {logging_mixin.py:188} INFO -   logistic_regression: AUC=0.8573 | Acc=0.7828
+[2026-06-16T13:14:22.284+0000] {logging_mixin.py:188} INFO -   random_forest: AUC=0.8783 | Acc=0.8278
+[2026-06-16T13:14:29.599+0000] {logging_mixin.py:188} INFO -   gradient_boosting: AUC=0.9061 | Acc=0.8379
+[2026-06-16T13:14:29.600+0000] {logging_mixin.py:188} INFO - 
+  Best model: gradient_boosting (AUC=0.9061)
+[2026-06-16T13:14:29.621+0000] {logging_mixin.py:188} INFO -   Model saved to: /opt/***/model_bank/2024_07_01
+[2026-06-16T13:14:29.622+0000] {logging_mixin.py:188} INFO - [Train] Model saved to /opt/***/model_bank/2024_07_01
+[2026-06-16T13:14:29.623+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-06-16T13:14:29.624+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-16T13:14:29.633+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=CS611_ML_Pipeline, task_id=model_training, run_id=scheduled__2024-07-01T00:00:00+00:00, execution_date=20240701T000000, start_date=20260616T131251, end_date=20260616T131429
+[2026-06-16T13:14:29.699+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-06-16T13:14:29.725+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-16T13:14:29.729+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,19 @@
+[2026-06-16T14:56:52.793+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-16T14:56:52.825+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: CS611_ML_Pipeline.gold_feature_store scheduled__2023-06-01T00:00:00+00:00 [queued]>
+[2026-06-16T14:56:52.836+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: CS611_ML_Pipeline.gold_feature_store scheduled__2023-06-01T00:00:00+00:00 [queued]>
+[2026-06-16T14:56:52.837+0000] {taskinstance.py:2306} INFO - Starting attempt 3 of 4
+[2026-06-16T14:56:52.849+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): gold_feature_store> on 2023-06-01 00:00:00+00:00
+[2026-06-16T14:56:52.855+0000] {standard_task_runner.py:63} INFO - Started process 8956 to run task
+[2026-06-16T14:56:52.858+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'CS611_ML_Pipeline', 'gold_feature_store', 'scheduled__2023-06-01T00:00:00+00:00', '--job-id', '486', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py', '--cfg-path', '/tmp/tmpgltw3596']
+[2026-06-16T14:56:52.861+0000] {standard_task_runner.py:91} INFO - Job 486: Subtask gold_feature_store
+[2026-06-16T14:56:52.903+0000] {task_command.py:426} INFO - Running <TaskInstance: CS611_ML_Pipeline.gold_feature_store scheduled__2023-06-01T00:00:00+00:00 [running]> on host 4b9938287cf4
+[2026-06-16T14:56:53.133+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ahana' AIRFLOW_CTX_DAG_ID='CS611_ML_Pipeline' AIRFLOW_CTX_TASK_ID='gold_feature_store' AIRFLOW_CTX_EXECUTION_DATE='2023-06-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-06-01T00:00:00+00:00'
+[2026-06-16T14:56:53.135+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-16T14:56:56.683+0000] {logging_mixin.py:188} INFO - [Gold Features] Building feature store for 2023-06-01
+[2026-06-16T14:57:21.230+0000] {logging_mixin.py:188} INFO - [Gold Features] 517 feature rows saved
+[2026-06-16T14:57:21.415+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-06-16T14:57:21.418+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-16T14:57:21.439+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=CS611_ML_Pipeline, task_id=gold_feature_store, run_id=scheduled__2023-06-01T00:00:00+00:00, execution_date=20230601T000000, start_date=20260616T145652, end_date=20260616T145721
+[2026-06-16T14:57:21.523+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-06-16T14:57:21.548+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-16T14:57:21.566+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

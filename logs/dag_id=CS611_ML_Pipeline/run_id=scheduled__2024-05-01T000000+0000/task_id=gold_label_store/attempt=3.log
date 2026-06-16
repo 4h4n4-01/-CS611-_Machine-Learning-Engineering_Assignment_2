@@ -1,0 +1,19 @@
+[2026-06-16T15:15:01.246+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-16T15:15:01.275+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: CS611_ML_Pipeline.gold_label_store scheduled__2024-05-01T00:00:00+00:00 [queued]>
+[2026-06-16T15:15:01.287+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: CS611_ML_Pipeline.gold_label_store scheduled__2024-05-01T00:00:00+00:00 [queued]>
+[2026-06-16T15:15:01.288+0000] {taskinstance.py:2306} INFO - Starting attempt 3 of 4
+[2026-06-16T15:15:01.298+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): gold_label_store> on 2024-05-01 00:00:00+00:00
+[2026-06-16T15:15:01.302+0000] {standard_task_runner.py:63} INFO - Started process 33939 to run task
+[2026-06-16T15:15:01.304+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'CS611_ML_Pipeline', 'gold_label_store', 'scheduled__2024-05-01T00:00:00+00:00', '--job-id', '584', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py', '--cfg-path', '/tmp/tmp_4s8cdiq']
+[2026-06-16T15:15:01.306+0000] {standard_task_runner.py:91} INFO - Job 584: Subtask gold_label_store
+[2026-06-16T15:15:01.345+0000] {task_command.py:426} INFO - Running <TaskInstance: CS611_ML_Pipeline.gold_label_store scheduled__2024-05-01T00:00:00+00:00 [running]> on host 4b9938287cf4
+[2026-06-16T15:15:01.675+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ahana' AIRFLOW_CTX_DAG_ID='CS611_ML_Pipeline' AIRFLOW_CTX_TASK_ID='gold_label_store' AIRFLOW_CTX_EXECUTION_DATE='2024-05-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-01T00:00:00+00:00'
+[2026-06-16T15:15:01.677+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-16T15:15:05.147+0000] {logging_mixin.py:188} INFO - [Gold Labels] Building label store for 2024-05-01
+[2026-06-16T15:15:14.768+0000] {logging_mixin.py:188} INFO - [Gold Labels] 491 labels saved
+[2026-06-16T15:15:15.003+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-06-16T15:15:15.011+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-16T15:15:15.027+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=CS611_ML_Pipeline, task_id=gold_label_store, run_id=scheduled__2024-05-01T00:00:00+00:00, execution_date=20240501T000000, start_date=20260616T151501, end_date=20260616T151515
+[2026-06-16T15:15:15.192+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-06-16T15:15:15.214+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-06-16T15:15:15.306+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,22 @@
+[2026-06-16T11:00:58.675+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-16T11:00:58.696+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: CS611_ML_Pipeline.bronze_ingestion scheduled__2024-05-01T00:00:00+00:00 [queued]>
+[2026-06-16T11:00:58.701+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: CS611_ML_Pipeline.bronze_ingestion scheduled__2024-05-01T00:00:00+00:00 [queued]>
+[2026-06-16T11:00:58.704+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-06-16T11:00:58.714+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): bronze_ingestion> on 2024-05-01 00:00:00+00:00
+[2026-06-16T11:00:58.718+0000] {standard_task_runner.py:63} INFO - Started process 32738 to run task
+[2026-06-16T11:00:58.720+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'CS611_ML_Pipeline', 'bronze_ingestion', 'scheduled__2024-05-01T00:00:00+00:00', '--job-id', '146', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py', '--cfg-path', '/tmp/tmpsaqsk_36']
+[2026-06-16T11:00:58.722+0000] {standard_task_runner.py:91} INFO - Job 146: Subtask bronze_ingestion
+[2026-06-16T11:00:58.756+0000] {task_command.py:426} INFO - Running <TaskInstance: CS611_ML_Pipeline.bronze_ingestion scheduled__2024-05-01T00:00:00+00:00 [running]> on host 9cb3f452a997
+[2026-06-16T11:00:58.932+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ahana' AIRFLOW_CTX_DAG_ID='CS611_ML_Pipeline' AIRFLOW_CTX_TASK_ID='bronze_ingestion' AIRFLOW_CTX_EXECUTION_DATE='2024-05-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-01T00:00:00+00:00'
+[2026-06-16T11:00:58.932+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-16T11:01:02.480+0000] {logging_mixin.py:188} INFO - [Bronze] Processing snapshot: 2024-05-01
+[2026-06-16T11:01:10.578+0000] {logging_mixin.py:188} INFO - [Bronze] clickstream
+[2026-06-16T11:01:11.941+0000] {logging_mixin.py:188} INFO - [Bronze] attributes
+[2026-06-16T11:01:13.145+0000] {logging_mixin.py:188} INFO - [Bronze] financials
+[2026-06-16T11:01:14.382+0000] {logging_mixin.py:188} INFO - [Bronze] lms
+[2026-06-16T11:01:14.803+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-06-16T11:01:14.804+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-16T11:01:14.813+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=CS611_ML_Pipeline, task_id=bronze_ingestion, run_id=scheduled__2024-05-01T00:00:00+00:00, execution_date=20240501T000000, start_date=20260616T110058, end_date=20260616T110114
+[2026-06-16T11:01:14.867+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-06-16T11:01:14.885+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-16T11:01:14.888+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

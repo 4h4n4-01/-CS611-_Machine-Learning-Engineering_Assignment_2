@@ -1,0 +1,18 @@
+[2026-06-16T11:09:45.932+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-16T11:09:45.960+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: CS611_ML_Pipeline.eda_analysis scheduled__2024-09-01T00:00:00+00:00 [queued]>
+[2026-06-16T11:09:45.968+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: CS611_ML_Pipeline.eda_analysis scheduled__2024-09-01T00:00:00+00:00 [queued]>
+[2026-06-16T11:09:45.970+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-06-16T11:09:45.983+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): eda_analysis> on 2024-09-01 00:00:00+00:00
+[2026-06-16T11:09:45.988+0000] {standard_task_runner.py:63} INFO - Started process 44905 to run task
+[2026-06-16T11:09:45.991+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'CS611_ML_Pipeline', 'eda_analysis', 'scheduled__2024-09-01T00:00:00+00:00', '--job-id', '186', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py', '--cfg-path', '/tmp/tmpf96vgwzr']
+[2026-06-16T11:09:45.993+0000] {standard_task_runner.py:91} INFO - Job 186: Subtask eda_analysis
+[2026-06-16T11:09:46.075+0000] {task_command.py:426} INFO - Running <TaskInstance: CS611_ML_Pipeline.eda_analysis scheduled__2024-09-01T00:00:00+00:00 [running]> on host 9cb3f452a997
+[2026-06-16T11:09:46.291+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ahana' AIRFLOW_CTX_DAG_ID='CS611_ML_Pipeline' AIRFLOW_CTX_TASK_ID='eda_analysis' AIRFLOW_CTX_EXECUTION_DATE='2024-09-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-01T00:00:00+00:00'
+[2026-06-16T11:09:46.292+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-16T11:09:46.300+0000] {logging_mixin.py:188} INFO - [EDA] Skipping 2024-09-01 - EDA runs only at retraining months (Jan/Jul)
+[2026-06-16T11:09:46.301+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-06-16T11:09:46.301+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-16T11:09:46.308+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=CS611_ML_Pipeline, task_id=eda_analysis, run_id=scheduled__2024-09-01T00:00:00+00:00, execution_date=20240901T000000, start_date=20260616T110945, end_date=20260616T110946
+[2026-06-16T11:09:46.364+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-06-16T11:09:46.384+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-16T11:09:46.388+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

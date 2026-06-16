@@ -1,0 +1,49 @@
+[2026-06-16T15:26:15.586+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-16T15:26:15.612+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: CS611_ML_Pipeline.visualise_monitoring scheduled__2024-11-01T00:00:00+00:00 [queued]>
+[2026-06-16T15:26:15.618+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: CS611_ML_Pipeline.visualise_monitoring scheduled__2024-11-01T00:00:00+00:00 [queued]>
+[2026-06-16T15:26:15.621+0000] {taskinstance.py:2306} INFO - Starting attempt 3 of 4
+[2026-06-16T15:26:15.632+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): visualise_monitoring> on 2024-11-01 00:00:00+00:00
+[2026-06-16T15:26:15.638+0000] {standard_task_runner.py:63} INFO - Started process 50548 to run task
+[2026-06-16T15:26:15.640+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'CS611_ML_Pipeline', 'visualise_monitoring', 'scheduled__2024-11-01T00:00:00+00:00', '--job-id', '644', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline_dag.py', '--cfg-path', '/tmp/tmp5c0_1rgd']
+[2026-06-16T15:26:15.643+0000] {standard_task_runner.py:91} INFO - Job 644: Subtask visualise_monitoring
+[2026-06-16T15:26:15.682+0000] {task_command.py:426} INFO - Running <TaskInstance: CS611_ML_Pipeline.visualise_monitoring scheduled__2024-11-01T00:00:00+00:00 [running]> on host 4b9938287cf4
+[2026-06-16T15:26:15.928+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ahana' AIRFLOW_CTX_DAG_ID='CS611_ML_Pipeline' AIRFLOW_CTX_TASK_ID='visualise_monitoring' AIRFLOW_CTX_EXECUTION_DATE='2024-11-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-11-01T00:00:00+00:00'
+[2026-06-16T15:26:15.929+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-16T15:26:17.599+0000] {logging_mixin.py:188} INFO - [Visualise] Backfilling AUC for 2024-05-01
+[2026-06-16T15:26:17.600+0000] {logging_mixin.py:188} INFO - [Monitor] Running monitoring for 2024-05-01
+[2026-06-16T15:26:17.676+0000] {logging_mixin.py:188} INFO - [Monitor] PSI = 0.0745 -> Stable
+[2026-06-16T15:26:19.149+0000] {logging_mixin.py:188} INFO - [Monitor] AUC=0.879 | Acc=0.8086
+[2026-06-16T15:26:19.201+0000] {logging_mixin.py:188} INFO - [Monitor] Saved monitoring record -> /opt/***/datamart/gold/monitoring/2024_05_01.parquet
+[2026-06-16T15:26:19.215+0000] {logging_mixin.py:188} INFO - [Visualise] Backfilling AUC for 2024-06-01
+[2026-06-16T15:26:19.215+0000] {logging_mixin.py:188} INFO - [Monitor] Running monitoring for 2024-06-01
+[2026-06-16T15:26:19.267+0000] {logging_mixin.py:188} INFO - [Monitor] PSI = 0.0311 -> Stable
+[2026-06-16T15:26:20.193+0000] {logging_mixin.py:188} INFO - [Monitor] Saved monitoring record -> /opt/***/datamart/gold/monitoring/2024_06_01.parquet
+[2026-06-16T15:26:20.203+0000] {logging_mixin.py:188} INFO - [Visualise] Backfilling AUC for 2024-07-01
+[2026-06-16T15:26:20.204+0000] {logging_mixin.py:188} INFO - [Monitor] Running monitoring for 2024-07-01
+[2026-06-16T15:26:20.235+0000] {logging_mixin.py:188} INFO - [Monitor] PSI = 0.4984 -> Major Shift - Retrain Model
+[2026-06-16T15:26:20.999+0000] {logging_mixin.py:188} INFO - [Monitor] Saved monitoring record -> /opt/***/datamart/gold/monitoring/2024_07_01.parquet
+[2026-06-16T15:26:21.007+0000] {logging_mixin.py:188} INFO - [Visualise] Backfilling AUC for 2024-08-01
+[2026-06-16T15:26:21.009+0000] {logging_mixin.py:188} INFO - [Monitor] Running monitoring for 2024-08-01
+[2026-06-16T15:26:21.039+0000] {logging_mixin.py:188} INFO - [Monitor] PSI = 0.0542 -> Stable
+[2026-06-16T15:26:22.274+0000] {logging_mixin.py:188} INFO - [Monitor] Saved monitoring record -> /opt/***/datamart/gold/monitoring/2024_08_01.parquet
+[2026-06-16T15:26:22.284+0000] {logging_mixin.py:188} INFO - [Visualise] Backfilling AUC for 2024-09-01
+[2026-06-16T15:26:22.284+0000] {logging_mixin.py:188} INFO - [Monitor] Running monitoring for 2024-09-01
+[2026-06-16T15:26:22.310+0000] {logging_mixin.py:188} INFO - [Monitor] PSI = 0.0394 -> Stable
+[2026-06-16T15:26:23.448+0000] {logging_mixin.py:188} INFO - [Monitor] Saved monitoring record -> /opt/***/datamart/gold/monitoring/2024_09_01.parquet
+[2026-06-16T15:26:23.456+0000] {logging_mixin.py:188} INFO - [Visualise] Backfilling AUC for 2024-10-01
+[2026-06-16T15:26:23.457+0000] {logging_mixin.py:188} INFO - [Monitor] Running monitoring for 2024-10-01
+[2026-06-16T15:26:23.482+0000] {logging_mixin.py:188} INFO - [Monitor] PSI = 0.0581 -> Stable
+[2026-06-16T15:26:24.730+0000] {logging_mixin.py:188} INFO - [Monitor] Saved monitoring record -> /opt/***/datamart/gold/monitoring/2024_10_01.parquet
+[2026-06-16T15:26:24.739+0000] {logging_mixin.py:188} INFO - [Visualise] Backfilling AUC for 2024-11-01
+[2026-06-16T15:26:24.740+0000] {logging_mixin.py:188} INFO - [Monitor] Running monitoring for 2024-11-01
+[2026-06-16T15:26:24.773+0000] {logging_mixin.py:188} INFO - [Monitor] PSI = 0.0302 -> Stable
+[2026-06-16T15:26:25.609+0000] {logging_mixin.py:188} INFO - [Monitor] Saved monitoring record -> /opt/***/datamart/gold/monitoring/2024_11_01.parquet
+[2026-06-16T15:26:25.823+0000] {logging_mixin.py:188} WARNING - /opt/***/utils/monitor.py:232 FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+[2026-06-16T15:26:26.815+0000] {logging_mixin.py:188} INFO - [Visualise] Dashboard saved as /opt/***/reports/monitoring_dashboard.png
+[2026-06-16T15:26:26.816+0000] {logging_mixin.py:188} INFO - [Visualise] Dashboard saved to /opt/***/reports/monitoring_dashboard.png
+[2026-06-16T15:26:26.816+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-06-16T15:26:26.817+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-16T15:26:26.826+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=CS611_ML_Pipeline, task_id=visualise_monitoring, run_id=scheduled__2024-11-01T00:00:00+00:00, execution_date=20241101T000000, start_date=20260616T152615, end_date=20260616T152626
+[2026-06-16T15:26:26.967+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-06-16T15:26:26.980+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-06-16T15:26:27.015+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
