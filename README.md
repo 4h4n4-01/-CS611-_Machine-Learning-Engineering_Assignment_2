@@ -1,6 +1,6 @@
 # End-to-End Loan Default ML Pipeline with Airflow, Drift Monitoring and Retraining Rules
 
-SMU CS611 Machine Learning Engineering, Assignment 2 (2026). Extends the [Assignment 1 data pipeline](https://github.com/4h4n4-01/cs611-loan-default-data-pipeline) into a monthly, orchestrated train → predict → monitor loop.
+SMU Machine Learning Engineering course, Assignment 2 (2026). Extends the [Assignment 1 data pipeline](https://github.com/4h4n4-01/loan-default-data-pipeline) into a monthly, orchestrated train → predict → monitor loop.
 
 ## Design decisions
 
